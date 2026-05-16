@@ -1,27 +1,46 @@
----
 name: "✨ Feature Request"
-about: "Suggest a new feature or improvement"
-labels: ["enhancement"]
----
+description: "Suggest a new feature or improvement"
+title: "[Feature]: "
+labels:
+  - enhancement
 
-## Problem Statement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Describe the pain point or issue.
+      placeholder: What problem does this solve?
+    validations:
+      required: true
 
-<!-- What problem does this solve? Describe the pain point. -->
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Explain the feature or improvement.
+      placeholder: What should ZerithDB do?
+    validations:
+      required: true
 
-## Proposed Solution
+  - type: textarea
+    id: api_design
+    attributes:
+      label: API Design
+      description: What would the ideal API look like?
+      render: typescript
+      placeholder: |
+        // Example API here
 
-<!-- What should ZerithDB do? Be specific. -->
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Other approaches you considered.
+      placeholder: Why are they insufficient?
 
-## API Design (if applicable)
-
-```typescript
-// What would the ideal API look like?
-```
-
-## Alternatives Considered
-
-<!-- What other approaches did you consider? Why are they insufficient? -->
-
-## Additional Context
-
-<!-- Links, references, prior art, etc. -->
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Links, references, prior art, etc.
